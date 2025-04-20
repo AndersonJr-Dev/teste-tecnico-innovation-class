@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- CONFIGURAÇÕES BÁSICAS DO DOCUMENTO -->
+    <!-- charset: Define a codificação de caracteres. UTF-8 suporta acentos e caracteres especiais -->
+    <meta charset="UTF-8" />
+    <!-- viewport: Configura como o site será exibido em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title: Título que aparece na aba do navegador -->
+    <title>AVANTI - Loja Online</title>
+
+    <!-- BIBLIOTECAS E ESTILOS -->
+    <!-- styles.css: Nosso arquivo de estilos personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome: Biblioteca de ícones que vamos usar no site -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Swiper CSS: Estilos do carrossel que vamos usar -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- CABEÇALHO DA PÁGINA -->
+    <header>
+      <!-- BARRA SUPERIOR: Mostra informações importantes como frete grátis -->
+      <div class="top-header">
+        <p>
+          Ganhe R$ 10,00 de desconto no seu primeiro pedido utilize o cupom
+          DESCONTO 10
+        </p>
+      </div>
+
+      <!-- BARRA DE NAVEGAÇÃO PRINCIPAL -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- LOGO: Imagem clicável que leva para a página inicial -->
+          <div class="logo">
+            <a href="/"
+              ><img
+                src="assets/images/Avanti.jpg"
+                alt="AVANTI"
+                class="site-logo"
+            /></a>
+          </div>
+
+          <!-- CAMPO DE BUSCA: Onde o usuário pode pesquisar produtos -->
+          <!-- Adicionando IDs para facilitar a seleção no JavaScript -->
+          <div class="search-bar">
+            <!-- Input: Campo onde o usuário digita o que procura -->
+            <input
+              id="search-input"
+              type="text"
+              placeholder="O que você procura?"
+            />
+            <!-- Button: Botão com ícone de lupa para iniciar a busca -->
+            <button id="search-button" type="button">
+              <i class="fas fa-search"></i>
+            </button>
+            <!-- search-result: Área que mostra os resultados da busca -->
+            <div id="search-result" class="search-result"></div>
+          </div>
+
+          <!-- LINKS DE NAVEGAÇÃO: Área com links importantes para o usuário -->
+          <div class="nav-actions">
+            <!-- Link para a área do usuário -->
+            <a href="#" class="nav-link"
+              ><i class="far fa-user"></i> Minha Conta</a
+            >
+            <!-- Link para os favoritos -->
+            <a href="#" class="nav-link"
+              ><i class="far fa-heart"></i> Favoritos</a
+            >
+            <!-- Link para o carrinho com contador de itens -->
+            <a href="#" class="cart-link">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- MENU DE CATEGORIAS: Links para as principais seções do site -->
+        <div class="categories-nav">
+          <ul>
+            <li><a href="#">Novidades</a></li>
+            <li><a href="#">Feminino</a></li>
+            <li><a href="#">Masculino</a></li>
+            <li><a href="#">Calçados</a></li>
+            <li><a href="#">Acessórios</a></li>
+            <li><a href="#">Outlet</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+    <main>
+      <!-- BANNER PRINCIPAL: Carrossel de imagens promocionais -->
+      <section class="hero-banner">
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            <!-- SLIDE: Cada slide contém uma imagem e conteúdo promocional -->
+            <div class="swiper-slide">
+              <div class="banner">
+                <!-- Imagem do banner -->
+                <img src="assets/images/banner1.jpg" alt="Slide 1" />
+                <!-- Conteúdo do banner: título, texto e botão -->
+                <div class="banner-content">
+                  <h1>SUPER SALE</h1>
+                  <p>Até 50% OFF em produtos selecionados</p>
+                  <a href="#" class="shop-now">Comprar Agora</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner">
+                <img src="assets/images/banner2.jpg" alt="Novidades" />
+                <div class="banner-content">
+                  <h1>NOVIDADES</h1>
+                  <p>Confira as últimas tendências</p>
+                  <a href="#" class="shop-now">Ver Mais</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <!-- SEÇÃO DE PRODUTOS: Carrossel de produtos em destaque -->
+      <section>
+        <div class="container">
+          <h2>Novidades</h2>
+          <div class="swiper products-swiper">
+            <div class="swiper-wrapper">
+              <!-- CARD DE PRODUTO: Cada produto tem imagem, tag, ações e informações -->
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <!-- Área da imagem do produto -->
+                  <div class="product-image">
+                    <img src="assets/images/img2.jpg" alt="Produto 1" />
+                    <!-- Tag: Indica se é novo, em promoção, etc -->
+                    <div class="product-tag">Novo</div>
+                    <!-- Ações: Botões de favorito e visualização rápida -->
+                    <div class="product-actions">
+                      <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                      </button>
+                      <button class="quickview-btn">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Informações do produto: nome, preço e botão -->
+                  <div class="product-info">
+                    <h3>Camisa masculina ant-transpirante</h3>
+                    <div class="product-price">
+                      <span class="current-price">R$ 79,99</span>
+                      <span class="original-price">R$ 100,00</span>
+                    </div>
+                    <p>ou em até 10x sem juros de 7,99</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="assets/images/img2.jpg" alt="Produto 1" />
+                    <div class="product-tag">Novo</div>
+                    <div class="product-actions">
+                      <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                      </button>
+                      <button class="quickview-btn">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3>Camisa masculina ant-transpirante</h3>
+                    <div class="product-price">
+                      <span class="current-price">R$ 79,99</span>
+                      <span class="original-price">R$ 100,00</span>
+                    </div>
+                    <p>ou em até 10x sem juros de 7,99</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="assets/images/img2.jpg" alt="Produto 1" />
+                    <div class="product-tag">Novo</div>
+                    <div class="product-actions">
+                      <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                      </button>
+                      <button class="quickview-btn">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3>Camisa masculina ant-transpirante</h3>
+                    <div class="product-price">
+                      <span class="current-price">R$ 79,99</span>
+                      <span class="original-price">R$ 100,00</span>
+                    </div>
+                    <p>ou em até 10x sem juros de 7,99</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Produto 4 (duplicado) -->
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="assets/images/img2.jpg" alt="Produto 1" />
+                    <div class="product-tag">Novo</div>
+                    <div class="product-actions">
+                      <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                      </button>
+                      <button class="quickview-btn">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3>Camisa masculina ant-transpirante</h3>
+                    <div class="product-price">
+                      <span class="current-price">R$ 79,99</span>
+                      <span class="original-price">R$ 100,00</span>
+                    </div>
+                    <p>ou em até 10x sem juros de 7,99</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DE PRODUTO EM DESTAQUE: Faixa com fundo cinza -->
+      <section class="product-highlight">
+        <div class="container">
+          <div
+            class="highlight-content"
+            style="display: flex; align-items: center; gap: 20px"
+          >
+            <div class="highlight-image" style="flex: 1; max-width: 50%">
+              <img
+                src="assets/images/caneca.jpg"
+                alt="Produto em destaque"
+                style="width: 100%; height: auto; border-radius: 8px"
+              />
+            </div>
+            <div class="highlight-text" style="flex: 1; max-width: 50%">
+              <h2>Produto em Destaque</h2>
+              <p>
+                Descubra a qualidade e o estilo deste incrível produto. Perfeito
+                para você!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <!-- SEÇÃO DE PRODUTO EM DESTAQUE: Faixa com fundo cinza -->
+      <section class="product-highlight">
+        <div class="container">
+          <div
+            class="highlight-content"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              flex-direction: row-reverse;
+            "
+          >
+            <div class="highlight-image" style="flex: 1; max-width: 50%">
+              <img
+                src="assets/images/caneca.jpg"
+                alt="Produto em destaque"
+                style="width: 100%; height: auto; border-radius: 8px"
+              />
+            </div>
+            <div class="highlight-text" style="flex: 1; max-width: 50%">
+              <h2>Produto em Destaque</h2>
+              <p>
+                Descubra a qualidade e o estilo deste incrível produto. Perfeito
+                para você!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <!-- SEÇÃO DE PRODUTO EM DESTAQUE: Faixa com fundo cinza -->
+      <section class="product-highlight">
+        <div class="container">
+          <div
+            class="highlight-content"
+            style="display: flex; align-items: center; gap: 20px"
+          >
+            <div class="highlight-image" style="flex: 1; max-width: 50%">
+              <img
+                src="assets/images/caneca.jpg"
+                alt="Produto em destaque"
+                style="width: 100%; height: auto; border-radius: 8px"
+              />
+            </div>
+            <div class="highlight-text" style="flex: 1; max-width: 50%">
+              <h2>Produto em Destaque</h2>
+              <p>
+                Descubra a qualidade e o estilo deste incrível produto. Perfeito
+                para você!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DE PRODUTOS: Carrossel de produtos em destaque -->
+      <section>
+        <div class="container">
+          <h2>Novidades</h2>
+          <div class="swiper products-swiper">
+            <div class="swiper-wrapper">
+              <!-- CARD DE PRODUTO: Cada produto tem imagem, tag, ações e informações -->
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <!-- Área da imagem do produto -->
+                  <div class="product-image">
+                    <img src="assets/images/img2.jpg" alt="Produto 1" />
+                    <!-- Tag: Indica se é novo, em promoção, etc -->
+                    <div class="product-tag">Novo</div>
+                    <!-- Ações: Botões de favorito e visualização rápida -->
+                    <div class="product-actions">
+                      <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                      </button>
+                      <button class="quickview-btn">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Informações do produto: nome, preço e botão -->
+                  <div class="product-info">
+                    <h3>Camisa masculina ant-transpirante</h3>
+                    <div class="product-price">
+                      <span class="current-price">R$ 79,99</span>
+                      <span class="original-price">R$ 100,00</span>
+                    </div>
+                    <p>ou em até 10x sem juros de 7,99</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="assets/images/img2.jpg" alt="Produto 1" />
+                    <div class="product-tag">Novo</div>
+                    <div class="product-actions">
+                      <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                      </button>
+                      <button class="quickview-btn">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3>Camisa masculina ant-transpirante</h3>
+                    <div class="product-price">
+                      <span class="current-price">R$ 79,99</span>
+                      <span class="original-price">R$ 100,00</span>
+                    </div>
+                    <p>ou em até 10x sem juros de 7,99</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="assets/images/img2.jpg" alt="Produto 1" />
+                    <div class="product-tag">Novo</div>
+                    <div class="product-actions">
+                      <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                      </button>
+                      <button class="quickview-btn">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3>Camisa masculina ant-transpirante</h3>
+                    <div class="product-price">
+                      <span class="current-price">R$ 79,99</span>
+                      <span class="original-price">R$ 100,00</span>
+                    </div>
+                    <p>ou em até 10x sem juros de 7,99</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Produto 4 (duplicado) -->
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="assets/images/img2.jpg" alt="Produto 1" />
+                    <div class="product-tag">Novo</div>
+                    <div class="product-actions">
+                      <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                      </button>
+                      <button class="quickview-btn">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-info">
+                    <h3>Camisa masculina ant-transpirante</h3>
+                    <div class="product-price">
+                      <span class="current-price">R$ 79,99</span>
+                      <span class="original-price">R$ 100,00</span>
+                    </div>
+                    <p>ou em até 10x sem juros de 7,99</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DE BENEFÍCIOS: Grid com os benefícios da loja -->
+      <section class="benefits">
+        <div class="container">
+          <div class="benefits-grid">
+            <!-- CARD DE BENEFÍCIO: Cada card tem ícone, título e descrição -->
+            <div class="benefit-card">
+              <i class="fas fa-truck"></i>
+              <h3>Frete Grátis</h3>
+              <p>Para todo o Brasil</p>
+            </div>
+            <div class="benefit-card">
+              <i class="fas fa-lock"></i>
+              <h3>Pagamento Seguro</h3>
+              <p>Ambiente protegido</p>
+            </div>
+            <div class="benefit-card">
+              <i class="fas fa-exchange-alt"></i>
+              <h3>Troca Grátis</h3>
+              <p>Em até 30 dias</p>
+            </div>
+            <div class="benefit-card">
+              <i class="fas fa-headset"></i>
+              <h3>Suporte 24/7</h3>
+              <p>Atendimento online</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DE NEWSLETTER: Formulário para captação de e-mails -->
+      <section class="newsletter">
+        <div class="container">
+          <div class="newsletter-content">
+            <h2>Receba nossas novidades</h2>
+            <p>Cadastre-se e receba ofertas exclusivas</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Seu melhor e-mail" />
+              <button type="submit">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- RODAPÉ: Informações institucionais e links importantes -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <!-- COLUNA INSTITUCIONAL: Links sobre a empresa -->
+          <div class="footer-column">
+            <h3>Institucional</h3>
+            <ul>
+              <li><a href="#">Sobre Nós</a></li>
+              <li><a href="#">Política de Privacidade</a></li>
+              <li><a href="#">Termos de Uso</a></li>
+              <li><a href="#">Trabalhe Conosco</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Ajuda</h3>
+            <ul>
+              <li><a href="#">Central de Atendimento</a></li>
+              <li><a href="#">Trocas e Devoluções</a></li>
+              <li><a href="#">Dúvidas Frequentes</a></li>
+              <li><a href="#">Status do Pedido</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Pagamento</h3>
+            <div class="payment-methods">
+              <!-- Ícones de métodos de pagamento -->
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Redes Sociais</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 AVANTI - Todos os direitos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS: Bibliotecas JavaScript necessárias -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Biblioteca do carrossel -->
+    <script src="script.js"></script>
+    <!-- Nossos scripts personalizados -->
+  </body>
+</html>
